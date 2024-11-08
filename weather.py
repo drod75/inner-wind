@@ -31,10 +31,10 @@ def get_weather(borough):
 
         for key, value in f.items():
             new_key = (key.replace('_', ' ')).title()
-            f1[new_key] = (str(value) + units_weather[key])
+            f1[new_key] = (str(value))
         for key, value in w.items():
             new_key = (key.replace('_', ' ')).title()
-            w1[new_key] = (str(value) + units_weather[key])
+            w1[new_key] = (str(value))
         
         content = {'current': f1, 'wind': w1}
         return content
@@ -54,10 +54,10 @@ def get_weather(borough):
 
         for key, value in f.items():
             new_key = (key.replace('_', ' ')).title()
-            f1[new_key] = (str(value) + units_weather[key])
+            f1[new_key] = (str(value))
         for key, value in w.items():
             new_key = (key.replace('_', ' ')).title()
-            w1[new_key] = (str(value) + units_weather[key])
+            w1[new_key] = (str(value))
         
         content = {'current': f1, 'wind': w1}
         return content
@@ -77,10 +77,10 @@ def get_weather(borough):
 
         for key, value in f.items():
             new_key = (key.replace('_', ' ')).title()
-            f1[new_key] = (str(value) + units_weather[key])
+            f1[new_key] = (str(value))
         for key, value in w.items():
             new_key = (key.replace('_', ' ')).title()
-            w1[new_key] = (str(value) + units_weather[key])
+            w1[new_key] = (str(value))
         
         content = {'current': f1, 'wind': w1}
         return content
