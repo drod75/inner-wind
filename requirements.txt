@@ -1,0 +1,6 @@
+Flask==3.0.3
+langchain_core==0.3.15
+langchain_mistralai==0.2.1
+pymeteosource==1.7.0
+python-dotenv==1.0.1
+ratelimit==2.2.1
