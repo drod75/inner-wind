@@ -6,9 +6,27 @@ from weather import get_weather
 app = Flask(__name__ ,static_folder='static')
 
 @app.route('/')
-@app.route('/forecast')
-def forecast():
-    weather_content = get_weather()
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
+@app.route('/forecast_brooklyn')
+def forecast_brooklyn():
+    weather_content = get_weather('brooklyn')
     ai_suggestions = get_weather_output(weather_content)
     content = {'weather': weather_content, 'ai': ai_suggestions}
-    return render_template('base.html', **content)
+    return render_template('brooklyn.html', **content)
+
+@app.route('/forecast_manhattan')
+def forecast_manhattan():
+    weather_content = get_weather('manhattan')
+    ai_suggestions = get_weather_output(weather_content)
+    content = {'weather': weather_content, 'ai': ai_suggestions}
+    return render_template('manhattan.html', **content)
+
+@app.route('/forecast_queens')
+def forecast_queens():
+    weather_content = get_weather('queens')
+    ai_suggestions = get_weather_output(weather_content)
+    content = {'weather': weather_content, 'ai': ai_suggestions}
+    return render_template('queens.html', **content)
