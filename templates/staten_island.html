@@ -2,9 +2,16 @@
 
 {% block content %}
     {% for key, value in (content['current']).items() %}
-    <p>{{ key }}: {{ value }}</p>
+    {% if key == 'icon_num' %}
+        {% pass %}
+    {% elif key == 'Sky Condition' %}
+        <img src="{{ (content['current'])['icon_num'] }}" alt="weather icon">
+        <p>{{ key }}: {{ value }}</p>
+    {% else %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endif %}
     {% endfor %}
     {% for key, value in (content['wind']).items() %}
-    <p>{{ key }}: {{ value }}</p>
+        <p>{{ key }}: {{ value }}</p>
     {% endfor %}
 {% endblock %}
