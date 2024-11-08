@@ -30,8 +30,12 @@ def get_weather(borough):
         w1 = dict()
 
         for key, value in f.items():
-            new_key = (key.replace('_', ' ')).title()
-            f1[new_key] = (str(value))
+            if key == 'icon_num':
+                image_path = f"/static/images/{value}.png"
+                f1[key] = image_path
+            else:
+                new_key = (key.replace('_', ' ')).title()
+                f1[new_key] = (str(value))
         for key, value in w.items():
             new_key = (key.replace('_', ' ')).title()
             w1[new_key] = (str(value))
@@ -53,8 +57,12 @@ def get_weather(borough):
         w1 = dict()
 
         for key, value in f.items():
-            new_key = (key.replace('_', ' ')).title()
-            f1[new_key] = (str(value))
+            if key == 'icon_num':
+                image_path = f"/static/images/{value}.png"
+                f1[key] = image_path
+            else:
+                new_key = (key.replace('_', ' ')).title()
+                f1[new_key] = (str(value))
         for key, value in w.items():
             new_key = (key.replace('_', ' ')).title()
             w1[new_key] = (str(value))
@@ -76,8 +84,12 @@ def get_weather(borough):
         w1 = dict()
 
         for key, value in f.items():
-            new_key = (key.replace('_', ' ')).title()
-            f1[new_key] = (str(value))
+            if key == 'icon_num':
+                image_path = f"/static/images/{value}.png"
+                f1[key] = image_path
+            else:
+                new_key = (key.replace('_', ' ')).title()
+                f1[new_key] = (str(value))
         for key, value in w.items():
             new_key = (key.replace('_', ' ')).title()
             w1[new_key] = (str(value))
