@@ -8,7 +8,9 @@ app = Flask(__name__ ,static_folder='static')
 @app.route('/')
 @app.route('/home')
 def home():
-    ai_content = get_weather_output('New York City')
+    boroughs = ['Bronx', 'Brooklyn', 'Manhattan', 'Queens', 'Staten Island']
+    content_full =[get_weather(borough) for borough in boroughs]
+    ai_content = get_weather_output(content_full)
     return render_template('home.html', content=ai_content)
 
 @app.route('/forecast_brooklyn')

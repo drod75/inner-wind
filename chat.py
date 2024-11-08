@@ -10,8 +10,9 @@ load_dotenv(Path(".env"))
 
 mistralai = ChatMistralAI(model = 'open-mistral-7b',api_key=os.getenv("MISTRAL_API_KEY"))
 prompt_template = ChatPromptTemplate.from_messages([
-    ("system", '''You are a helpful assistant that takes in weather data via a dictionary,
-     with this data you use it to give people advice for what to do depending on the weather.'''),
+    ("system", '''You are a helpful assistant that takes in weather data via a list with two dictionaries, 
+     and give advice for each point in each dictionary in the list, for each dictionary provide a list of 
+     3 bullet points for each feature and then return it'''),
     ("human", "{input}"),
 ])
 chain = prompt_template | mistralai
