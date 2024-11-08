@@ -17,7 +17,7 @@ prompt_template = ChatPromptTemplate.from_messages([
 ])
 chain = prompt_template | mistralai
 
-hour_interval = 1800;
+hour_interval = 3600;
 @limits(calls=24, period=hour_interval)
 def get_weather_output(weather_list):
     output = chain.invoke({"input": weather_list})
