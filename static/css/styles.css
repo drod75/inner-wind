@@ -32,7 +32,8 @@ h1 {
     color: #baffdf;
     padding: 30px;
     margin: 0 auto;
-    gap: 10px;                 
+    gap: 10px;    
+    align-items: stretch;             
   }
   
   .boroughs > div {
