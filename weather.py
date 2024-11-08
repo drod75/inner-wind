@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv(dotenv_path='.env')
+seconds = 0;
 
 def get_weather():
     meteosource = Meteosource(os.getenv('metoeosource'), tier=tiers.FREE)
