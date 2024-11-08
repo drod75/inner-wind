@@ -12,7 +12,7 @@ p {
  margin-right: calc(0.25 * 100%);
  font-size: 25px;
  background-color: #ffffff;
- width: calc(200px * 0.5 * 100vw);
+ width: 300px;
  padding-left: 10px;
  padding-right: 10px;
  padding-top: 30px;
@@ -43,8 +43,15 @@ h1 {
     align-items: center;
     flex: 1 1 0;               
     max-width: 300px;          
-    min-width: 100px;         
+    min-width: 50px;   
+    height: auto;      
     box-sizing: border-box;    
+  }
+
+  @media (max-width: 575px) {
+    .boroughs > div {
+      font-size: 12px;
+    }
   }
   
 hr {
