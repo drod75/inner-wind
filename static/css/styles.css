@@ -23,6 +23,16 @@ h1 {
   text-align: center;
 }
 
+.home > p {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.home {
+    align-items: center;       
+    text-align: center;
+}
+
 .boroughs {
     display: flex;
     justify-content: center;   
