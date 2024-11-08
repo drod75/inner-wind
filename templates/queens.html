@@ -2,11 +2,9 @@
 
 {% block content %}
     {% for key, value in (content['current']).items() %}
-    <p>{{ key }}</p>
-    <p>{{ value }}</p>
+    <p>{{ key }}: {{ value }}</p>
     {% endfor %}
     {% for key, value in (content['wind']).items() %}
-    <p>{{ key }}</p>
-    <p>{{ value }}</p>
+    <p>{{ key }}: {{ value }}</p>
     {% endfor %}
 {% endblock %}
