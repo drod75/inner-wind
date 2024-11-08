@@ -11,11 +11,24 @@ hour_interval = 1800;
 
 @limits(calls=24, period=hour_interval)
 def get_weather(borough):
-    borough_data = []
+
     meteosource = Meteosource(os.getenv('metoeosource'), tier=tiers.FREE)
-    forecast = meteosource.get_point_forecast(place_id=borough, units=units.US, sections = [sections.CURRENT, sections.DAILY], langs = [langs.ENGLISH])
-    current_weather = forecast.current.to_pandas()      
-    current_wind = forecast.current.wind.to_pandas()
-    borough_data.append(current_weather)
-    borough_data.append(current_wind)
-    return borough_data
+
+    if borough == 'Bronx':
+        forecast = meteosource.get_point_forecast(lat=40.84985, lon= -73.86641, units=units.US, sections = [sections.CURRENT, sections.DAILY])
+        f = forecast.current.to_dict()
+        w = forecast.current.wind.to_dict()
+        content = {'current': f, 'wind': w}
+        return content
+    elif borough =='Staten Island':
+        forecast = meteosource.get_point_forecast(lat=40.56233, lon=-74.13986, units=units.US, sections = [sections.CURRENT, sections.DAILY])
+        f = forecast.current.to_dict()
+        w = forecast.current.wind.to_dict()
+        content = {'current': f, 'wind': w}
+        return content
+    else:
+        forecast = meteosource.get_point_forecast(place_id=borough, units=units.US, sections = [sections.CURRENT, sections.DAILY])
+        f = forecast.current.to_dict()
+        w = forecast.current.wind.to_dict()
+        content = {'current': f, 'wind': w}
+        return content

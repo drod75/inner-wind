@@ -12,21 +12,24 @@ def home():
 
 @app.route('/forecast_brooklyn')
 def forecast_brooklyn():
-    weather_content = get_weather('brooklyn')
-    ai_suggestions = get_weather_output(weather_content)
-    content = {'weather': weather_content, 'ai': ai_suggestions}
-    return render_template('brooklyn.html', **content)
+    content = get_weather('Brooklyn')
+    return render_template('brooklyn.html', content=content)
 
 @app.route('/forecast_manhattan')
 def forecast_manhattan():
-    weather_content = get_weather('manhattan')
-    ai_suggestions = get_weather_output(weather_content)
-    content = {'weather': weather_content, 'ai': ai_suggestions}
-    return render_template('manhattan.html', **content)
-
+    content = get_weather('Manhattan')
+    return render_template('manhattan.html', content=content)
 @app.route('/forecast_queens')
 def forecast_queens():
-    weather_content = get_weather('queens')
-    ai_suggestions = get_weather_output(weather_content)
-    content = {'weather': weather_content, 'ai': ai_suggestions}
-    return render_template('queens.html', **content)
+    content = get_weather('Queens')
+    return render_template('queens.html', content=content)
+
+@app.route('/forecast_bronx')
+def forecast_bronx():
+    content = get_weather('Bronx')
+    return render_template('bronx.html', content=content)
+
+@app.route('/forecast_staten_island')
+def forecast_staten_island():
+    content = get_weather('Staten Island')
+    return render_template('staten_island.html', content=content)

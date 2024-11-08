@@ -1,3 +1,10 @@
 {% extends "base.html" %}
 
-{% block content %}{% endblock %}
+{% block content %}
+    {% for key, value in (content['current']).items() %}
+    <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+    {% for key, value in (content['wind']).items() %}
+    <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+{% endblock %}
