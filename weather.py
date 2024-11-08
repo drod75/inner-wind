@@ -10,7 +10,7 @@ hour_interval = 1800;
 
 @limits(calls=24, period=hour_interval)
 def get_weather():
-    places = ['The Bronx', 'Manhattan', 'Brooklyn', 'Queens', 'Staten Island']
+    places = ['Manhattan', 'Brooklyn', 'Queens']
     forecast_city = []
     meteosource = Meteosource(os.getenv('metoeosource'), tier=tiers.FREE)
     for place in places:
