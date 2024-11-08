@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 from chat import get_weather_output
-import pandas as pd
 from weather import get_weather
 
 app = Flask(__name__ ,static_folder='static')

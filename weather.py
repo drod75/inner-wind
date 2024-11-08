@@ -1,9 +1,7 @@
 from ratelimit import limits
-from datetime import datetime, timedelta
 from pymeteosource.api import Meteosource
 from pymeteosource.types import tiers, sections, langs, units
 from dotenv import load_dotenv
-import pandas as pd
 import os
 
 load_dotenv(dotenv_path='.env')
