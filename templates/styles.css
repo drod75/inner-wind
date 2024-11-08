@@ -1,8 +1,8 @@
 body {
+    min-height: 100vh;
     background-image: linear-gradient(to right,#C1FFF2 , #BAFFDF);
     color: #7c7287;
     font-family: "Funnel Sans", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
@@ -16,6 +16,28 @@ h1 {
     margin: auto;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 30px;
+}
+
+.flex-container > div {
+    width: 300px; 
+}
+
+.boroughs {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #9DC0BC;
+    color: #BAFFDF;
+    width: 100% vw;
+    padding: 30px;
+}
+
+.boroughs > div {
+    background-color: #7C7287;
+    margin: 30px;
+    padding: 30px;
+    width: 300px; 
 }
 
 hr {
