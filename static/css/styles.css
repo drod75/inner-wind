@@ -1,18 +1,20 @@
 body {
   min-height: 100vh;
-  background-image: linear-gradient(to right, #c1fff2, #baffdf);
-  color: 5E6472;
+  background-image: linear-gradient(to right, #B8F2E6, #AED9E0);
+  color: #5E6472;
   font-family: "Funnel Sans", sans-serif;
   font-style: normal;
   overflow-x: hidden;
 }
 
 p {
- margin-left: calc(0.25 * 100%);
- margin-right: calc(0.25 * 100%);
+ /*margin-left: calc(0.25 * 100%);
+ margin-right: calc(0.25 * 100%); */
+ margin-left: 50px;
+text-align: center;
  font-size: 25px;
  background-color: #ffffff;
- width: 300px;
+ width: 30%;
  padding-left: 10px;
  padding-right: 10px;
  padding-top: 30px;
@@ -24,6 +26,19 @@ h1 {
   text-align: center;
 }
 
+.title {
+  position: relative;
+  text-align: center; /* Centers the h1 horizontally */
+  margin-top: 20px;
+}
+
+.home-icon {
+  position: absolute;
+  top: 0;         /* Positions it at the top */
+  left: 0;        /* Positions it on the left */
+  margin: 10px;   /* Adds some padding from the edge */
+}
+
 .image {
     position: relative;
     /*left: 650px;
@@ -31,16 +46,27 @@ h1 {
     z-index: -1;
 }
 
-.home > p {
-  max-width: 70vw;
-  padding: 20px;
-  border-radius: 25px;
-  width: 90%;
-}
 
 .home {
-    align-items: center;       
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 90vw; /* Limit overall width */
+  width: 90vw;
+  margin: 0 auto; /* Center in viewport */
+}
+
+.home > p {
+  max-width: 80vw; /* Constrain to 80% of viewport width */
+  width: 80vw;
+  padding: 20px;
+  font-size: 25px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .boroughs {
@@ -49,7 +75,7 @@ h1 {
     justify-content: center;   
     align-items: center;       
     text-align: center;
-    background-color: #9dc0bc;
+    background-color: #FAF3DD;
     color: #baffdf;
     padding: 30px;
     margin: 0 auto;
@@ -58,7 +84,7 @@ h1 {
   }
   
   .boroughs > div {
-    background-color: #7c7287;
+    background-color: #FFA69E;
     border-radius: 25px;
     padding: 30px;
     display: flex;
@@ -66,19 +92,43 @@ h1 {
     align-items: center;
     flex: 1 1 0;               
     max-width: 300px;          
-    min-width: 50px;   
+    min-width: 40px;   
     height: auto;      
     box-sizing: border-box;  
     font-size: 25px;  
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 850px) {
     .boroughs > div {
-      font-size: 12px;
+      font-size: 16px;
+    }
+    p {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .boroughs > div {
+      font-size: 10px;
+    }
+    h1 {
+      font-size: 16px;
+    }
+    p {
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 430px) {
+    h1 {
+      font-size: 16px;
+    }
+    p {
+      width: 60%;
     }
   }
   
 hr {
-  border: 1px solid #9dc0bc;
+  border: 1px solid #FAF3DD;
   width: 65%;
 }
