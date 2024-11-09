@@ -17,6 +17,7 @@ def get_weather(borough):
         forecast = meteosource.get_point_forecast(lat=40.84985, lon= -73.86641, units=units.US, sections = [sections.CURRENT, sections.DAILY])
         f = forecast.current.to_dict()
         n = f.pop('icon')
+        n = w.pop('icon_num')
         f['Sky Condition'] = f.pop('summary')
 
         w = forecast.current.wind.to_dict()
