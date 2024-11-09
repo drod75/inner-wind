@@ -7,19 +7,36 @@ body {
   overflow-x: hidden;
 }
 
+.borough-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px; 
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.borough-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  width: 40%; 
+}
+
 p {
- /*margin-left: calc(0.25 * 100%);
- margin-right: calc(0.25 * 100%); */
- margin-left: 50px;
-text-align: center;
- font-size: 25px;
- background-color: #ffffff;
- width: 30%;
- padding-left: 10px;
- padding-right: 10px;
- padding-top: 30px;
- padding-bottom: 30px;
- border-radius: 25px;
+  font-size: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 25px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;         
+  max-width: 760px;
+  height: auto;
+  border-radius: 10px;
 }
 
 h1 {
@@ -28,22 +45,15 @@ h1 {
 
 .title {
   position: relative;
-  text-align: center; /* Centers the h1 horizontally */
+  text-align: center; 
   margin-top: 20px;
 }
 
 .home-icon {
   position: absolute;
-  top: 0;         /* Positions it at the top */
-  left: 0;        /* Positions it on the left */
-  margin: 10px;   /* Adds some padding from the edge */
-}
-
-.image {
-    position: relative;
-    /*left: 650px;
-    top: 100px; */
-    z-index: -1;
+  top: 0;         
+  left: 0;        
+  margin: 10px;   
 }
 
 
@@ -53,13 +63,13 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  max-width: 90vw; /* Limit overall width */
+  max-width: 90vw; 
   width: 90vw;
-  margin: 0 auto; /* Center in viewport */
+  margin: 0 auto; 
 }
 
 .home > p {
-  max-width: 80vw; /* Constrain to 80% of viewport width */
+  max-width: 80vw; 
   width: 80vw;
   padding: 20px;
   font-size: 25px;
@@ -102,8 +112,8 @@ h1 {
     .boroughs > div {
       font-size: 16px;
     }
-    p {
-      width: 40%;
+    .borough-data {
+      width: 50%; 
     }
   }
 
@@ -115,16 +125,22 @@ h1 {
       font-size: 16px;
     }
     p {
-      width: 60%;
+      font-size: 12px;
+      text-overflow: wrap;
+    }
+    .borough-data {
+      width: 70%; 
     }
   }
 
   @media (max-width: 430px) {
-    h1 {
-      font-size: 16px;
-    }
     p {
       width: 60%;
+      font-size: 10px;
+      text-overflow: wrap;
+    }
+    .borough-data {
+      width: 90%; 
     }
   }
   

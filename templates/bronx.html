@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for key, value in (content['current']).items() %}
-        <p>{{ key }}: {{ value }}</p>
-    {% endfor %}
-    {% for key, value in (content['wind']).items() %}
-        <p>{{ key }}: {{ value }}</p>
-    {% endfor %}
+<div class="borough-page">
+    <div class="borough-data">
+        {% for key, value in (content['current']).items() %}
+            <p>{{ key }}: {{ value }}</p>
+        {% endfor %}
+        {% for key, value in (content['wind']).items() %}
+            <p>{{ key }}: {{ value }}</p>
+        {% endfor %}
+    </div>
+    <img src="../static/images/bronxMap.png" alt="Bronx Map">
+</div>
 {% endblock %}
+
