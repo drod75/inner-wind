@@ -12,7 +12,7 @@ p {
  margin-right: calc(0.25 * 100%);
  font-size: 25px;
  background-color: #ffffff;
- width: 90%;
+ width: 300px;
  padding-left: 10px;
  padding-right: 10px;
  padding-top: 30px;
@@ -26,14 +26,16 @@ h1 {
 
 .image {
     position: relative;
-    left: 300px;
-    top: 50px;
+    /*left: 650px;
+    top: 100px; */
+    z-index: -1;
 }
 
 .home > p {
   max-width: 70vw;
   padding: 20px;
   border-radius: 25px;
+  width: 90%;
 }
 
 .home {
