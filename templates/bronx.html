@@ -3,7 +3,9 @@
 {% block content %}
     {% for key, value in (content['current']).items() %}
     {% if key == 'Sky Condition' %}
-        <img src="{{ (content['current'])['icon_num'] }}" alt="weather icon">
+        <div class = "image"> 
+            <img src="{{ (content['current'])['icon_num'] }}" alt="weather icon"> 
+        </div>
         <p>{{ key }}: {{ value }}</p>
     {% elif key != 'icon_num' and key != 'Sky Condition' %}
         <p>{{ key }}: {{ value }}</p>
