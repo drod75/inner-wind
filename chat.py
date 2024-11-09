@@ -8,11 +8,12 @@ import os
 
 load_dotenv(Path(".env"))
 
-mistralai = ChatMistralAI(model = 'open-mistral-7b',api_key=os.getenv("MISTRAL_API_KEY"))
+mistralai = ChatMistralAI(model = 'open-mixtral-8x22b',api_key=os.getenv("MISTRAL_API_KEY"))
 prompt_template = ChatPromptTemplate.from_messages([
     ("system", '''You are a helpful assistant that takes in weather data via a list with two dictionaries, 
      and give advice for each point in each dictionary in the list, for each dictionary provide a list of 
-     3 bullet points for each feature and then return it'''),
+     3 bullet points for each feature and then return it. Make sure you format the output so when
+     it is placed in html code it appears nice and neat.'''),
     ("human", "{input}"),
 ])
 chain = prompt_template | mistralai
